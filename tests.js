@@ -52,5 +52,40 @@ describe('isFive', function() {
 
 //isEven
 describe('isEven',function() {
-    it('')
+    it('should be defined as a function', function() {
+        expect(typeof isEven).toBe('function');
+    })
+    it('should return a boolean for any number', function() {
+        expect(typeof isEven()).toBe("boolean");
+    })
+    it('should return true when executed with 2', function() {
+        expect(isEven(2)).toBe(true);
+    })
+    it('should return true when executed with -4', function() {
+        expect(isEven(-4)).toBe(true);
+    })
+    it('should return false when executed with 3', function() {
+        expect(isEven(3)).toBe(false);
+    })
+    it('should return false when executed with banana', function() {
+        expect(isEven('banana')).toBe(false);
+    })
+    it('should return false when executed with 8', function() {
+        expect(isEven('8')).toBe(true);
+    })
+    it('should return false when executed with infinity', function() {
+        expect(isEven(Infinity)).toBe(false);
+    })
+    it('should return false when executed with boolean', function() {
+        expect(isEven('true')).toBe(false);
+    })
+    it('should return false when executed without an arguement', function() {
+        expect(isEven()).toBe(false);
+    })
 })
+
+
+//isVowel
+describe('isVowel',function() {
+    it('should be defined as a function', function() {
+        expect(typeof isVowel).toBe('function');
