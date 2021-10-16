@@ -89,3 +89,12 @@ describe('isEven',function() {
 describe('isVowel',function() {
     it('should be defined as a function', function() {
         expect(typeof isVowel).toBe('function');
+    })
+    it('should return a boolean for any vowel', function() {
+        expect(typeof isVowel()).toBe('boolean');
+    })
+    it('should return true when executed with isVowel "a" ', function() {
+        expect(isVowel('a')).toBe('true');
+    })
+
+})
